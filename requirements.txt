@@ -10,6 +10,7 @@ PyExecJS
 requests
 html2text
 httpx[http2]
+httpx_socks
 fake-useragent
 beautifulsoup4
 tiktoken==0.6.0

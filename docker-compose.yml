@@ -2,12 +2,19 @@ version: "3.5"
 services:
   chatgptbot:
     container_name: chatgptbot
-    image: yym68686/chatgpt:latest
+    image: docker.io/library/chatgpt:latest 
     environment:
-      - BOT_TOKEN=
-      - API=
-      - API_URL=
+      - BOT_TOKEN=${BOT_TOKEN}
+      - API=${API}
+      - API_URL=${API_URL}
+      - CUSTOM_MODELS=${CUSTOM_MODELS}
+      - GPT_ENGINE=${GPT_ENGINE}
+      - ADMIN_LIST=${ADMIN_LIST}
+      - GROUP_LIST=${GROUP_LIST}
+      - whitelist=${whitelist}
+      - NICK=${NICK}
+      - SYSTEMPROMPT=${SYSTEMPROMPT}
     volumes:
       - ./user_configs:/home/user_configs
     ports:
-      - 80:8080
+      - 12349:8080
