@@ -11,6 +11,7 @@ requests
 html2text
 httpx-socks
 httpx[http2]
+httpx_socks
 fake-useragent
 beautifulsoup4
 lxml-html-clean
