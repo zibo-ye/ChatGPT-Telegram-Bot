@@ -2,7 +2,9 @@ version: "3.5"
 services:
   chatgptbot:
     container_name: chatgptbot
-    image: docker.io/library/chatgpt:latest 
+    build: # 👈 Changed from 'image' to 'build'
+      context: . # 👈 Specifies the current directory as the build context
+      dockerfile: Dockerfile.build # 👈 Explicitly specifies the Dockerfile name (optional if named Dockerfile)
     environment:
       - BOT_TOKEN=${BOT_TOKEN}
       - API=${API}
